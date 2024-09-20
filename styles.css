@@ -1,66 +1,94 @@
-body{
+/* General Styles */
+body {
     margin: 0;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: hsl(0,0%, 0%);
-}
-
-#calculator{
-    font-family: Arial, sans-serif;
-    background-color: hsl(0,0%, 15%);
-    border-radius: 15px;
-    max-width: 500px;
-    overflow:hidden;
-
-}
-
-#display{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  #calculator {
+    width: 360px; /* Adjusted width for better proportions */
+  }
+  
+  /* Display Styles */
+  #display {
     width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    boarder: none;
-    background-color: hsl(0,0%, 60%);
+    height: 100px;
+    background-color: black;
     color: white;
-}
-
-#keys{
+    border: none;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 3rem;
+    box-sizing: border-box;
+  }
+  
+  /* Keys Container */
+  #keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 80px;
     gap: 10px;
-    padding: 25px;
-}
-
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+  }
+  
+  /* Button Styles */
+  button {
+    width: 80px;
+    height: 80px;
     border: none;
-    background-color: gray;
+    font-size: 2rem;
     color: white;
-    font-size: 3rem;
-    font-weight: bolder;
     cursor: pointer;
-}
-
-button:hover{
-    background-color: hsl(0,0%, 40%);;
-}
-
-button:active{
-    background-color: hsl(0,0%, 50%);
-}
-
-.op-btn{
-    background-color: hsl(35, 100%, 55%);
-}
-
-.op-btn:hover{
-    background-color: hsl(35, 100%, 65%)
-}
-
-.op-btn:active{
-
-    background-color: hsl(35, 100%, 75%)
-}
+    border-radius: 50%;
+  }
+  
+  /* Number Buttons */
+  .number-btn {
+    background-color: #333333;
+  }
+  
+  .number-btn:active {
+    background-color: #4d4d4d;
+  }
+  
+  /* Zero Button (Spanning Two Columns) */
+  .zero-btn {
+    grid-column: span 2;
+    width: calc(80px * 2 + 10px); /* Width of two buttons plus gap */
+    border-radius: 40px;          /* Half of the height for oval shape */
+  }
+  
+  /* Function Buttons (AC, ±, %) */
+  .function-btn {
+    background-color: #a5a5a5;
+    color: black;
+  }
+  
+  .function-btn:active {
+    background-color: #cccccc;
+  }
+  
+  /* Operator Buttons (+, -, ×, ÷, =) */
+  .operator-btn {
+    background-color: #ff9500;
+  }
+  
+  .operator-btn:active {
+    background-color: #ffa733;
+  }
+  
+  /* Button Hover Effects */
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Adjust Font for Better Appearance */
+  button, #display {
+    font-weight: lighter;
+  }
+  
